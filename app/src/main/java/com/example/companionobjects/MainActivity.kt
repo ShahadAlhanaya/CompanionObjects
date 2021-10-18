@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                mainConstraintLayout.setBackgroundResource(Utilities.getBackground(spinner.selectedItem.toString()))
+                Utilities.changeBackground(spinner.selectedItem.toString(),mainConstraintLayout)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {

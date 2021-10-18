@@ -1,15 +1,17 @@
 package com.example.companionobjects
 
+import android.view.View
+
 class Utilities {
     companion object {
+
         val timeArray = arrayOf("Day", "Night")
-        fun getBackground(time: String): Int {
-            return when (time) {
-                "Day" -> R.drawable.day
 
-                "Night" -> R.drawable.night
-
-                else -> R.drawable.day
+        fun changeBackground(time: String,view : View){
+            when (time) {
+                "Day" ->  view.setBackgroundResource(R.drawable.day)
+                "Night" -> view.setBackgroundResource(R.drawable.night)
+                else -> view.setBackgroundResource(R.drawable.day)
 
             }
         }
